@@ -8,11 +8,11 @@ global:
 
   gaudillm:
     namespace: gaudi-llm
-    build_envs: [] 
+    build_envs: []
     runtime_envs: []
-
+    
     tei_embedding:
-      image: tei-gaudi:latest
+      image: ghcr.io/huggingface/tei-gaudi:latest
       model_id: BAAI/bge-large-en-v1.5 # change to set custom TEI embedding model
 #   uncomment to customize PVC size if using TEI models bigger thanBAAI/bge-large-en-v1.5
 #      pvc:i
@@ -29,22 +29,22 @@ global:
       name: tgi-70b-gaudi
 
     chatqna_gaudi_backend: 
-      image: chatqna:latest
+      image: ghcr.io/huggingface/chatqna:latest
     chatqna_ui_server:  
-      image: chatqna-ui:latest
+      image: ghcr.io/huggingface/chatqna-ui:latest
     dataprep:  
-      image: dataprep-redis:latest
+      image: ghcr.io/huggingface/dataprep-redis:latest
     embedding:  
-      image: embedding-tei:latest
+      image: ghcr.io/huggingface/embedding-tei:latest
     gaudillm_init: {}
     llm_server_for_gaudi:  
-      image: llm-tgi:latest
+      image: ghcr.io/huggingface/llm-tgi:latest
     redis_vector_db:  
-      image: redis/redis-stack:7.2.0-v9
+      image: ghcr.io/huggingface/redis/redis-stack:7.2.0-v9
     reranking:  
-      image: reranking-tei:latest
+      image: ghcr.io/huggingface/reranking-tei:latest
     retriever:
-      image: retriever-redis:latest
+      image: ghcr.io/huggingface/retriever-redis:latest
   
 main:
   clusterGroupName: hub
