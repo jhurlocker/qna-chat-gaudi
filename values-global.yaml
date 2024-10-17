@@ -29,22 +29,22 @@ global:
       name: tgi-70b-gaudi
 
     chatqna_gaudi_backend: 
-      image: chatqna:latest
+      image: opea/chatqna:latest
     chatqna_ui_server:  
-      image: chatqna-ui:latest
+      image: opea/chatqna-ui:latest
     dataprep:  
-      image: dataprep-redis:latest
+      image: opea/dataprep-redis:latest
     embedding:  
-      image: embedding-tei:latest
+      image: opea/embedding-tei:latest
     gaudillm_init: {}
     llm_server_for_gaudi:  
-      image: llm-tgi:latest
+      image: opea/llm-tgi:latest
     redis_vector_db:  
       image: redis/redis-stack:7.2.0-v9
     reranking:  
-      image: reranking-tei:latest
+      image: opea/reranking-tei:latest
     retriever:
-      image: retriever-redis:latest
+      image: opea/retriever-redis:latest
   
 main:
   clusterGroupName: hub
